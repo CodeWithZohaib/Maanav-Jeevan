@@ -6,92 +6,101 @@
 
 @layer base {
   :root {
-    --background: 45 30% 97%;
-    --foreground: 150 25% 15%;
+    --background: 0 0% 100%;
+    --foreground: 220 20% 15%;
 
-    --card: 45 40% 95%;
-    --card-foreground: 150 25% 15%;
+    --card: 30 30% 98%;
+    --card-foreground: 220 20% 15%;
 
-    --popover: 45 30% 97%;
-    --popover-foreground: 150 25% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
 
-    --primary: 150 45% 25%;
-    --primary-foreground: 45 30% 97%;
+    --primary: 12 76% 58%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 35 85% 55%;
-    --secondary-foreground: 150 25% 15%;
+    --secondary: 174 55% 35%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 45 20% 90%;
-    --muted-foreground: 150 15% 40%;
+    --muted: 30 20% 96%;
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 35 85% 55%;
-    --accent-foreground: 150 25% 15%;
+    --accent: 38 92% 60%;
+    --accent-foreground: 220 20% 15%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 150 20% 85%;
-    --input: 150 20% 85%;
-    --ring: 150 45% 25%;
+    --border: 30 15% 90%;
+    --input: 30 15% 90%;
+    --ring: 12 76% 58%;
 
     --radius: 0.75rem;
 
-    /* Custom tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(150 45% 25% / 0.95), hsl(150 35% 35% / 0.9));
-    --gradient-warm: linear-gradient(135deg, hsl(35 85% 55%), hsl(25 90% 50%));
-    --gradient-soft: linear-gradient(180deg, hsl(45 30% 97%), hsl(45 40% 93%));
+    /* Custom humanitarian tokens */
+    --coral: 12 76% 58%;
+    --coral-light: 12 76% 68%;
+    --teal: 174 55% 35%;
+    --teal-light: 174 45% 45%;
+    --gold: 38 92% 60%;
+    --warm-gray: 30 10% 40%;
     
-    --shadow-soft: 0 4px 20px -4px hsl(150 25% 15% / 0.1);
-    --shadow-card: 0 8px 30px -8px hsl(150 25% 15% / 0.15);
-    --shadow-glow: 0 0 40px hsl(35 85% 55% / 0.3);
+    --gradient-hero: linear-gradient(135deg, hsl(12 76% 58%), hsl(12 76% 48%));
+    --gradient-warm: linear-gradient(135deg, hsl(38 92% 60%), hsl(12 76% 58%));
+    --gradient-teal: linear-gradient(135deg, hsl(174 55% 35%), hsl(174 45% 45%));
+    --gradient-soft: linear-gradient(180deg, hsl(0 0% 100%), hsl(30 30% 98%));
+    
+    --shadow-soft: 0 4px 20px -4px hsl(220 20% 15% / 0.08);
+    --shadow-card: 0 8px 30px -8px hsl(220 20% 15% / 0.12);
+    --shadow-glow: 0 0 40px hsl(12 76% 58% / 0.25);
+    --shadow-teal: 0 0 40px hsl(174 55% 35% / 0.2);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 20% 15%;
+    --sidebar-primary: 12 76% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 30 30% 98%;
+    --sidebar-accent-foreground: 220 20% 15%;
+    --sidebar-border: 30 15% 90%;
+    --sidebar-ring: 12 76% 58%;
   }
 
   .dark {
-    --background: 150 25% 8%;
-    --foreground: 45 30% 95%;
+    --background: 220 20% 8%;
+    --foreground: 30 20% 95%;
 
-    --card: 150 25% 12%;
-    --card-foreground: 45 30% 95%;
+    --card: 220 20% 12%;
+    --card-foreground: 30 20% 95%;
 
-    --popover: 150 25% 8%;
-    --popover-foreground: 45 30% 95%;
+    --popover: 220 20% 8%;
+    --popover-foreground: 30 20% 95%;
 
-    --primary: 150 45% 40%;
-    --primary-foreground: 150 25% 8%;
+    --primary: 12 76% 58%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 35 85% 55%;
-    --secondary-foreground: 150 25% 8%;
+    --secondary: 174 55% 45%;
+    --secondary-foreground: 220 20% 8%;
 
-    --muted: 150 20% 18%;
-    --muted-foreground: 45 20% 65%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 30 15% 65%;
 
-    --accent: 35 85% 55%;
-    --accent-foreground: 150 25% 8%;
+    --accent: 38 92% 60%;
+    --accent-foreground: 220 20% 8%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 150 20% 20%;
-    --input: 150 20% 20%;
-    --ring: 150 45% 40%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 12 76% 58%;
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-background: 220 20% 8%;
+    --sidebar-foreground: 30 20% 95%;
+    --sidebar-primary: 12 76% 58%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 220 15% 15%;
+    --sidebar-accent-foreground: 30 20% 95%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 12 76% 58%;
   }
 }
 
@@ -119,6 +128,11 @@
     background-image: var(--gradient-warm);
   }
 
+  .text-gradient-teal {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-teal);
+  }
+
   .card-hover {
     @apply transition-all duration-500 hover:shadow-card hover:-translate-y-1;
   }
@@ -126,4 +140,53 @@
   .btn-glow {
     box-shadow: var(--shadow-glow);
   }
+
+  .btn-glow-teal {
+    box-shadow: var(--shadow-teal);
+  }
+
+  /* Floating animation */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 6s ease-in-out 2s infinite;
+  }
+
+  .animate-float-slow {
+    animation: float 8s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+}
+
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(20px, -30px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  75% {
+    transform: translate(30px, 10px) scale(1.05);
+  }
+}
+
+.animate-blob {
+  animation: blob 12s infinite;
+}
+
+.animate-blob-delayed {
+  animation: blob 12s infinite 4s;
 }
