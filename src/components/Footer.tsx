@@ -1,13 +1,15 @@
 import { ScrollReveal } from "./ScrollReveal";
 import { motion } from "framer-motion";
 import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube, ArrowUp } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const quickLinks = [
-    { name: "About Us", href: "#about" },
-    { name: "Our Programs", href: "#programs" },
-    { name: "Volunteer", href: "#volunteer" },
-    { name: "Donate", href: "#donate" },
+    { name: "About Us", href: "/#about", isHash: true },
+    { name: "Our Programs", href: "/#programs", isHash: true },
+    { name: "Volunteer", href: "/#volunteer", isHash: true },
+    { name: "Donate", href: "/donate", isHash: false },
+    { name: "Contact", href: "/contact", isHash: false },
   ];
 
   const programs = [
@@ -84,13 +86,24 @@ export const Footer = () => {
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.name}>
-                    <motion.a
-                      href={link.href}
-                      whileHover={{ x: 5 }}
-                      className="text-background/70 hover:text-primary transition-colors duration-300 inline-block"
-                    >
-                      {link.name}
-                    </motion.a>
+                    {link.isHash ? (
+                      <motion.a
+                        href={link.href}
+                        whileHover={{ x: 5 }}
+                        className="text-background/70 hover:text-primary transition-colors duration-300 inline-block"
+                      >
+                        {link.name}
+                      </motion.a>
+                    ) : (
+                      <motion.div whileHover={{ x: 5 }} className="inline-block">
+                        <Link
+                          to={link.href}
+                          className="text-background/70 hover:text-primary transition-colors duration-300"
+                        >
+                          {link.name}
+                        </Link>
+                      </motion.div>
+                    )}
                   </li>
                 ))}
               </ul>

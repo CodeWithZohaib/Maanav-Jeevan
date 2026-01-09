@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Heart, Users, HandHeart, ArrowDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const HeroSection = () => {
   return (
@@ -130,15 +131,19 @@ export const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button variant="warm" size="xl" className="shadow-lg">
-                <HandHeart className="w-5 h-5" />
-                Donate Now
+              <Button variant="warm" size="xl" className="shadow-lg" asChild>
+                <Link to="/donate">
+                  <HandHeart className="w-5 h-5" />
+                  Donate Now
+                </Link>
               </Button>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button variant="outline" size="xl" className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground">
-                <Users className="w-5 h-5" />
-                Join as Volunteer
+              <Button variant="outline" size="xl" className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground" asChild>
+                <a href="#volunteer">
+                  <Users className="w-5 h-5" />
+                  Join as Volunteer
+                </a>
               </Button>
             </motion.div>
           </motion.div>
